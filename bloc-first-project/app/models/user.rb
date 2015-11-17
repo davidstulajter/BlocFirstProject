@@ -3,4 +3,19 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :items, dependent: :destroy
+  validates :name, presence: true    
+
+  def admin?
+    role == 'admin'     
+  end
+
+  def moderator?
+    role == 'moderator'   
+  end   
+
+  def member?
+    role == 'member'
+  end
 end
