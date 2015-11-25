@@ -1,7 +1,17 @@
-<h1><%= current_user.email %>'s Profile</h1>
+<h2 class="welcome-email">Welcome, <%= current_user.email %>!</h2>
 
-<% current_user.items.each do |item| %>
-  <!-- code to show an item -->
-<% end %>
-
-  <!-- item form goes here -->
+    <div class="container-fluid">
+      <div class="to-do-container">
+        <div class="row">
+          <% unless current_user.items.any? %>
+          <div class="text-center">
+            <h4>Make your first to-do below</h4>
+          </div>
+          <% end %>
+        </div>
+        <div class="to-do-items text-left js-items">
+          <%= render current_user.items %>
+        </div>
+        <div class="text-left new-item">
+            <%= render partial: 'items/form', locals: {item: Item.new } %>
+        </div>

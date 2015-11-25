@@ -1,0 +1,19 @@
+<%= form_for item do |f| %>
+<% if item.errors.any? %>
+  <div class= "alert alert-danger">
+    <h4> There are <%= pluralize(item.errors.count, "error") %>.</h4>
+    <ul>
+      <% item.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+  <%= form_group_tag(item.errors[:name]) do %>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Enter your to-do and click 'Create To-do'" %>
+  <% end %>
+  <div class="form-group">
+    <div class="btn-to-do">
+    <%= f.submit "Create To-do", class: 'btn-to-do' %>
+    </div>
+  </div>
+<% end %>

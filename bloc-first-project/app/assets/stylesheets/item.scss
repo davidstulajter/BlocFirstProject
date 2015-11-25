@@ -1,0 +1,28 @@
+// Place all the styles related to the Item controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.btn-to-do {
+  width: 100%;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 2em;
+  background-color: #2e2c2a;
+}
+
+.item-name {
+  color: #FFF;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-bottom: -10px;
+  border-bottom: 1px solid #9FA09E;
+}
+
+.glyphicon {
+  color: #fff;
+  margin-right: 20px;
+}
+
+.days-remaining {
+  margin-right:10px;
+  margin-bottom:2px;
+}

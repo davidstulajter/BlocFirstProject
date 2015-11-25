@@ -16,3 +16,60 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.user-info {
+  margin-top: 9px;
+}
+ 
+.nav {
+  margin-top: 5px;
+}
+
+.welcome-name {
+margin-top: 30px;
+text-align: center;
+font-family: "Open Sans";
+}
+
+.jumbotron {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+}
+.btn {
+  text-decoration:none;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #9932CC;
+  border-color: #333;
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  padding: 1px 6px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+}
+.to-do-container {
+  margin: 0 auto;
+  background-color: #9932CC;
+  color: #FFF;
+  margin: 18px;
+}
+.align-right {
+  float: right;
+  margin-top: -18px;
+}

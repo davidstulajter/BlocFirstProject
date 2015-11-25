@@ -1,0 +1,8 @@
+<%= content_tag :div, class: 'item', id: "item-#{item.id}" do %>
+  <div class="to-do-container"><h4 class="item-name"><%= item.name %></h4></div>
+  <div class="align-right">
+    <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %>
+      <span class="glyphicon glyphicon-ok-sign"></span>
+      <p class="align-right days-remaining"><%= distance_of_time_in_words(item.created_at, item.created_at + 7.days) %> Days Remaining</p>
+  </div>
+<% end %>

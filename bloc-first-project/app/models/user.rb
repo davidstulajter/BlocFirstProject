@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :items, dependent: :destroy
-  validates :name, presence: true    
-
+  
   def admin?
     role == 'admin'     
   end
@@ -19,3 +18,5 @@ class User < ActiveRecord::Base
     role == 'member'
   end
 end
+
+
